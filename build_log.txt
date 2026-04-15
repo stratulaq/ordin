@@ -1,0 +1,308 @@
+
+> ordin@2.0.0 build
+> next build
+
+   ▲ Next.js 15.4.1
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 1000ms
+   Linting and checking validity of types ...
+
+ ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/app/api-reference/config/eslint#migrating-existing-config
+
+Failed to compile.
+
+./src/app/form/page.tsx
+1:13  Warning: Insert `;`  prettier/prettier
+3:54  Warning: Insert `;`  prettier/prettier
+4:58  Warning: Insert `;`  prettier/prettier
+5:25  Warning: Insert `;`  prettier/prettier
+6:1  Error: `lucide-react` import should occur before import of `react-hook-form`  import/order
+6:24  Warning: 'Check' is defined but never used.  @typescript-eslint/no-unused-vars
+6:100  Warning: Insert `;`  prettier/prettier
+7:1  Error: There should be at least one empty line between import groups  import/order
+7:1  Error: `date-fns` import should occur before import of `react-hook-form`  import/order
+7:34  Warning: Insert `;`  prettier/prettier
+8:46  Warning: Insert `;`  prettier/prettier
+9:33  Warning: Insert `;`  prettier/prettier
+10:1  Error: `@/components/ui/button` import should occur before import of `@/lib/utils`  import/order
+10:48  Warning: Insert `;`  prettier/prettier
+11:1  Error: `@/components/ui/form` import should occur before import of `@/lib/utils`  import/order
+11:9  Warning: Replace `⏎··Form,⏎··FormControl,⏎··FormField,⏎··FormItem,⏎··FormLabel,⏎··FormMessage,⏎}·from·"@/components/ui/form"` with `·Form,·FormControl,·FormField,·FormItem,·FormLabel,·FormMessage·}·from·"@/components/ui/form";`  prettier/prettier
+19:1  Error: `@/components/ui/input` import should occur before import of `@/lib/utils`  import/order
+19:46  Warning: Insert `;`  prettier/prettier
+20:1  Error: `@/components/ui/textarea` import should occur before import of `@/lib/utils`  import/order
+20:52  Warning: Insert `;`  prettier/prettier
+21:1  Error: There should be at least one empty line between import groups  import/order
+21:1  Error: `@/components/ui/card` import should occur before import of `@/lib/utils`  import/order
+21:57  Warning: Insert `;`  prettier/prettier
+22:1  Error: There should be at least one empty line between import groups  import/order
+22:1  Error: `sonner` import should occur before import of `zod`  import/order
+22:31  Warning: Insert `;`  prettier/prettier
+23:1  Error: `@/components/ui/sidebar` import should occur before import of `@/lib/utils`  import/order
+33:33  Warning: Insert `;`  prettier/prettier
+34:1  Error: `@/components/ui/separator` import should occur before import of `@/lib/utils`  import/order
+34:54  Warning: Insert `;`  prettier/prettier
+35:1  Error: `@/components/ui/calendar` import should occur before import of `@/lib/utils`  import/order
+35:52  Warning: Insert `;`  prettier/prettier
+36:1  Error: `@/components/ui/popover` import should occur before import of `@/lib/utils`  import/order
+36:9  Warning: Replace `⏎··Popover,⏎··PopoverContent,⏎··PopoverTrigger,⏎}·from·"@/components/ui/popover"` with `·Popover,·PopoverContent,·PopoverTrigger·}·from·"@/components/ui/popover";`  prettier/prettier
+41:1  Error: `@/hooks/amountToWord` import should occur before import of `@/lib/utils`  import/order
+42:1  Error: `@/components/ui/button-group` import should occur before import of `@/lib/utils`  import/order
+42:59  Warning: Insert `;`  prettier/prettier
+43:1  Error: `@/components/ui/field` import should occur before import of `@/lib/utils`  import/order
+43:9  Warning: Replace `⏎··Field,⏎··FieldGroup,⏎··FieldLabel,⏎}·from·"@/components/ui/field"` with `·Field,·FieldGroup,·FieldLabel·}·from·"@/components/ui/field";`  prettier/prettier
+49:1  Warning: Delete `⏎`  prettier/prettier
+49:1  Error: More than 1 blank line not allowed.  no-multiple-empty-lines
+70:3  Warning: Insert `;`  prettier/prettier
+72:45  Warning: Insert `;`  prettier/prettier
+96:5  Warning: Insert `;`  prettier/prettier
+99:19  Warning: Insert `;`  prettier/prettier
+100:24  Warning: Insert `;`  prettier/prettier
+101:55  Warning: Insert `;`  prettier/prettier
+102:17  Warning: Insert `;`  prettier/prettier
+111:32  Warning: Replace `flex·h-14·shrink-0·items-center·justify-between·gap-2·border-b·bg-white·px-4·sticky·top-0·z-10` with `sticky·top-0·z-10·flex·h-14·shrink-0·items-center·justify-between·gap-2·border-b·bg-white·px-4`  prettier/prettier
+128:60  Warning: Delete `·`  prettier/prettier
+135:4  Warning: Insert `;`  prettier/prettier
+139:51  Warning: Insert `;`  prettier/prettier
+153:91  Warning: Replace `text-white·leading-non` with `leading-none·text-whit`  prettier/prettier
+154:30  Warning: Replace `text-xs·font-bold·font-mono` with `font-mono·text-xs·font-bold`  prettier/prettier
+158:35  Warning: Replace `[10px]·text-muted-foreground·uppercase·font-medium` with `muted-foreground·text-[10px]·font-medium·uppercase`  prettier/prettier
+166:70  Warning: Replace `zinc-900·font-bold·uppercase·tracking-wider·text-[10px]` with `[10px]·font-bold·tracking-wider·text-zinc-900·uppercase`  prettier/prettier
+195:30  Warning: Replace `w-full·pl-3·text-left·font-normal·h-8·text-xs` with `h-8·w-full·pl-3·text-left·text-xs·font-normal`  prettier/prettier
+196:29  Warning: Unnecessary conditional, value is always falsy.  @typescript-eslint/no-unnecessary-condition
+196:68  Warning: Insert `,`  prettier/prettier
+199:28  Warning: Unnecessary conditional, value is always truthy.  @typescript-eslint/no-unnecessary-condition
+199:42  Warning: Replace `(⏎····························format(field.value,·"dd.MM.yyyy")⏎··························)·:·(⏎····························<span>Pick·a·date</span>⏎··························)` with `format(field.value,·"dd.MM.yyyy")·:·<span>Pick·a·date</span>`  prettier/prettier
+209:32  Warning: Replace `⏎························mode="single"⏎························selected={field.value}⏎························onSelect={field.onChange}⏎⏎·····················` with `·mode="single"·selected={field.value}·onSelect={field.onChange}`  prettier/prettier
+228:27  Warning: Replace `·placeholder="0.00"·{...field}·className=""` with `⏎······················placeholder="0.00"⏎······················{...field}⏎······················className=""⏎·····················`  prettier/prettier
+245:70  Warning: Replace `zinc-900·font-bold·uppercase·tracking-wider·text-[10px]` with `[10px]·font-bold·tracking-wider·text-zinc-900·uppercase`  prettier/prettier
+316:1  Error: File has too many lines (555). Maximum allowed is 300.  max-lines
+341:30  Warning: Replace `⏎······················placeholder="Ex:·Factura·nr..."⏎······················{...field}⏎······················className="min-h-[80px]·text-sm·resize-none"⏎···················` with `·placeholder="Ex:·Factura·nr..."·{...field}·className="min-h-[80px]·resize-none·text-sm"`  prettier/prettier
+396:4  Warning: Insert `;`  prettier/prettier
+399:1  Error: Function 'OrderPreview' has a complexity of 15. Maximum allowed is 10.  complexity
+400:49  Warning: Insert `;`  prettier/prettier
+401:25  Warning: Insert `;`  prettier/prettier
+410:4  Warning: Insert `;`  prettier/prettier
+418:4  Warning: Insert `;`  prettier/prettier
+424:22  Warning: Replace `p-0·w-full·border-0·max-w-3xl·shadow-none·bg-white·overflow-hidden·animate-in·fade-in·slide-in-from-bottom-4` with `animate-in·fade-in·slide-in-from-bottom-4·w-full·max-w-3xl·overflow-hidden·border-0·bg-white·p-0·shadow-none`  prettier/prettier
+425:31  Warning: Replace `p-2·flex·flex-col·gap-4` with `flex·flex-col·gap-4·p-2`  prettier/prettier
+427:46  Warning: Replace `pb-2·border-b-2·border-dashed·border-zinc-200` with `border-b-2·border-dashed·border-zinc-200·pb-2`  prettier/prettier
+434:46  Warning: Replace `⏎··············{values.dataEmiterii·?·format(values.dataEmiterii,·"dd.MM.yyyy")·:·"—"}⏎············` with `{values.dataEmiterii·?·format(values.dataEmiterii,·"dd.MM.yyyy")·:·"—"}`  prettier/prettier
+435:16  Warning: Unnecessary conditional, value is always truthy.  @typescript-eslint/no-unnecessary-condition
+439:30  Warning: Replace `gap-4·pb-2·border-b-2·items-end·border-dashed·border-zinc-200` with `items-end·gap-4·border-b-2·border-dashed·border-zinc-200·pb-2`  prettier/prettier
+442:60  Warning: Replace `{values.suma·?·`${formatter.format(Number(values.suma))}·LEI`·:·"0.00·LEI"}` with `⏎··············{values.suma·?·`${formatter.format(Number(values.suma))}·LEI`·:·"0.00·LEI"}⏎············`  prettier/prettier
+464:32  Warning: Replace `flex-col·gap-4·basis-2/3` with `basis-2/3·flex-col·gap-4`  prettier/prettier
+465:39  Warning: Replace `col·gap-4·flex-1` with `1·flex-col·gap-4`  prettier/prettier
+467:31  Warning: Replace `bg-zinc-50·p-2·rounded-lg·min-h-[100px]·border·border-zinc-100` with `min-h-[100px]·rounded-lg·border·border-zinc-100·bg-zinc-50·p-2`  prettier/prettier
+471:29  Warning: Replace `flex·flex-col·gap-4·flex-1··pt-2·border-t-2·border-zinc-400·inset-0` with `inset-0·flex·flex-1·flex-col·gap-4·border-t-2·border-zinc-400·pt-2`  prettier/prettier
+487:33  Warning: Replace `border-zinc-400·border·rounded-lg·flex-1·h-full">⏎················` with `h-full·flex-1·rounded-lg·border·border-zinc-400">`  prettier/prettier
+490:38  Warning: Replace `[10px]·uppercase·font-black·text-muted-foreground·tracking-widest">Semnătura·Prestatorului` with `muted-foreground·text-[10px]·font-black·tracking-widest·uppercase">⏎····················Semnătura·Prestatorului⏎··················`  prettier/prettier
+491:35  Warning: Replace `h-20·w-full·border-2·border-dashed·border-zinc-200·rounded-lg·flex·items-center·justify-center·text-[10px]·text-zinc-300·uppercase·font-black·italic·p-4">⏎··················` with `flex·h-20·w-full·items-center·justify-center·rounded-lg·border-2·border-dashed·border-zinc-200·p-4·text-[10px]·font-black·text-zinc-300·uppercase·italic">`  prettier/prettier
+496:1  Warning: Delete `⏎`  prettier/prettier
+499:32  Warning: Replace `flex-col·gap-4·basis-1/3` with `basis-1/3·flex-col·gap-4`  prettier/prettier
+501:47  Warning: Replace `gap-2·justify-between` with `justify-between·gap-2`  prettier/prettier
+502:21  Warning: Insert `⏎···············`  prettier/prettier
+503:82  Warning: Replace `text-white·font-bold"·:·"")}` with `font-bold·text-white"·:·"")}⏎··············`  prettier/prettier
+505:52  Warning: Replace `<SquareCheckBig·data-icon="inline-end"·strokeWidth={2}·/>·:·<Square·data-icon="inline-end"·strokeWidth={2}·/>` with `(⏎··················<SquareCheckBig·data-icon="inline-end"·strokeWidth={2}·/>⏎················)·:·(⏎··················<Square·data-icon="inline-end"·strokeWidth={2}·/>⏎················)`  prettier/prettier
+507:21  Warning: Insert `⏎···············`  prettier/prettier
+508:82  Warning: Replace `text-white·font-bold"·:·"")}` with `font-bold·text-white"·:·"")}⏎··············`  prettier/prettier
+510:52  Warning: Replace `<SquareCheckBig·data-icon="inline-end"·strokeWidth={2}·/>·:·<Square·data-icon="inline-end"·strokeWidth={2}·/>` with `(⏎··················<SquareCheckBig·data-icon="inline-end"·strokeWidth={2}·/>⏎················)·:·(⏎··················<Square·data-icon="inline-end"·strokeWidth={2}·/>⏎················)`  prettier/prettier
+512:21  Warning: Insert `⏎···············`  prettier/prettier
+513:83  Warning: Replace `text-white·font-bold"·:·"")}` with `font-bold·text-white"·:·"")}⏎··············`  prettier/prettier
+515:53  Warning: Replace `<SquareCheckBig·data-icon="inline-end"·strokeWidth={2}·/>·:·<Square·data-icon="inline-end"·strokeWidth={2}·/>` with `(⏎··················<SquareCheckBig·data-icon="inline-end"·strokeWidth={2}·/>⏎················)·:·(⏎··················<Square·data-icon="inline-end"·strokeWidth={2}·/>⏎················)`  prettier/prettier
+520:42  Warning: Replace `h-24·w-24·mx-auto` with `mx-auto·h-24·w-24`  prettier/prettier
+521:52  Warning: Replace `rounded-full·border-4·border-double·border-zinc-100·flex·items-center·justify-center` with `flex·items-center·justify-center·rounded-full·border-4·border-double·border-zinc-100`  prettier/prettier
+522:37  Warning: Replace `text-[10px]·text-zinc-600·uppercase·font-black·text-center·rotate-12">⏎······················L.S.⏎····················` with `rotate-12·text-center·text-[10px]·font-black·text-zinc-600·uppercase">L.S.`  prettier/prettier
+530:36  Warning: Replace `[10px]·uppercase·font-black·text-muted-foreground·tracking-widest">Semnătura·Plătitorului` with `muted-foreground·text-[10px]·font-black·tracking-widest·uppercase">⏎··················Semnătura·Plătitorului⏎················`  prettier/prettier
+531:33  Warning: Replace `h-20·w-full·border-2·border-dashed·border-zinc-200·rounded-lg·flex·items-center·justify-center·text-[10px]·text-zinc-300·uppercase·font-black·italic·p-4">⏎················` with `flex·h-20·w-full·items-center·justify-center·rounded-lg·border-2·border-dashed·border-zinc-200·p-4·text-[10px]·font-black·text-zinc-300·uppercase·italic">`  prettier/prettier
+534:19  Warning: Delete `⏎`  prettier/prettier
+542:4  Warning: Insert `;`  prettier/prettier
+547:21  Warning: Replace `flex·items-center·gap-3·pb-2·border-b-2·border-zinc-400·inset-0` with `inset-0·flex·items-center·gap-3·border-b-2·border-zinc-400·pb-2`  prettier/prettier
+548:45  Warning: Replace `uppercase·font-bold·text-white·bg-zinc-500">{number}` with `bg-zinc-500·font-bold·text-white·uppercase">⏎········{number}⏎······`  prettier/prettier
+549:22  Warning: Replace `font-bold·uppercase·text-sm` with `text-sm·font-bold·uppercase`  prettier/prettier
+551:4  Warning: Insert `;`  prettier/prettier
+555:29  Warning: Replace `xs·uppercase·font-bold·text-muted-foreground·">{label}</p>` with `muted-foreground·text-xs·font-bold·uppercase">{label}</p>;`  prettier/prettier
+557:23  Warning: Replace `·part·}:·{·part:·{·company:·string;·idno:·string;·bank:·string;·bic:·string;·codLEI:·string;·iban:·string·}·` with `⏎··part,⏎}:·{⏎··part:·{·company:·string;·idno:·string;·bank:·string;·bic:·string;·codLEI:·string;·iban:·string·};⏎`  prettier/prettier
+558:10  Warning: Insert `(⏎····`  prettier/prettier
+559:5  Warning: Replace `<div·className="flex·flex-col·gap-4·basis-2/3` with `··<div·className="flex·basis-2/3·flex-col·gap-4`  prettier/prettier
+560:1  Warning: Insert `··`  prettier/prettier
+561:1  Warning: Insert `··`  prettier/prettier
+562:9  Warning: Replace `<p·className="font-bold·border-b·border-zinc-100·py-1` with `··<p·className="border-b·border-zinc-100·py-1·font-bold`  prettier/prettier
+563:7  Warning: Insert `··`  prettier/prettier
+564:7  Warning: Insert `··`  prettier/prettier
+565:1  Warning: Insert `··`  prettier/prettier
+566:9  Warning: Replace `<p·className="font-medium·py-1·border-b·border-zinc-100">{part.bank·||·"—"}·/·{part.bic·||·"—"}` with `··<p·className="border-b·border-zinc-100·py-1·font-medium">⏎············{part.bank·||·"—"}·/·{part.bic·||·"—"}⏎··········`  prettier/prettier
+567:7  Warning: Insert `··`  prettier/prettier
+568:1  Warning: Replace `····` with `······`  prettier/prettier
+569:1  Warning: Replace `····<div·className="flex·flex-col·gap-4·basis-1/3` with `······<div·className="flex·basis-1/3·flex-col·gap-4`  prettier/prettier
+570:7  Warning: Insert `··`  prettier/prettier
+571:1  Warning: Insert `··`  prettier/prettier
+572:9  Warning: Replace `<p·className="font-mono·text-sm·border-b·border-zinc-100` with `··<p·className="border-b·border-zinc-100·font-mono·text-sm`  prettier/prettier
+573:7  Warning: Insert `··`  prettier/prettier
+574:1  Warning: Insert `··`  prettier/prettier
+575:9  Warning: Insert `··`  prettier/prettier
+576:9  Warning: Replace `<p·className="font-mono·text-sm·border-b·border-zinc-100` with `··<p·className="border-b·border-zinc-100·font-mono·text-sm`  prettier/prettier
+577:7  Warning: Insert `··`  prettier/prettier
+578:7  Warning: Insert `··`  prettier/prettier
+579:1  Warning: Insert `··`  prettier/prettier
+580:9  Warning: Replace `<p·className="font-mono·text-sm·border-b·border-zinc-100` with `··<p·className="border-b·border-zinc-100·font-mono·text-sm`  prettier/prettier
+581:7  Warning: Insert `··`  prettier/prettier
+582:1  Warning: Replace `····` with `······`  prettier/prettier
+583:1  Warning: Replace `⏎⏎··</div>` with `····</div>⏎··);`  prettier/prettier
+584:1  Error: More than 1 blank line not allowed.  no-multiple-empty-lines
+
+./src/app/layout.tsx
+8:10  Warning: 'getPreference' is defined but never used.  @typescript-eslint/no-unused-vars
+9:10  Warning: 'PreferencesStoreProvider' is defined but never used.  @typescript-eslint/no-unused-vars
+10:10  Warning: 'THEME_MODE_VALUES' is defined but never used.  @typescript-eslint/no-unused-vars
+10:29  Warning: 'THEME_PRESET_VALUES' is defined but never used.  @typescript-eslint/no-unused-vars
+10:55  Warning: 'ThemePreset' is defined but never used.  @typescript-eslint/no-unused-vars
+10:73  Warning: 'ThemeMode' is defined but never used.  @typescript-eslint/no-unused-vars
+23:10  Warning: Replace `⏎······lang="en"⏎······className="light"⏎······suppressHydrationWarning⏎····` with `·lang="en"·className="light"·suppressHydrationWarning`  prettier/prettier
+29:9  Warning: Delete `··`  prettier/prettier
+30:1  Warning: Delete `··`  prettier/prettier
+
+./src/app/page.tsx
+1:13  Warning: Insert `;`  prettier/prettier
+3:1  Error: There should be at least one empty line between import groups  import/order
+3:33  Warning: Insert `;`  prettier/prettier
+4:1  Error: There should be at least one empty line between import groups  import/order
+4:44  Warning: Insert `;`  prettier/prettier
+5:82  Warning: Insert `;`  prettier/prettier
+6:1  Error: There should be at least one empty line between import groups  import/order
+6:1  Error: `@/components/ui/card` import should occur before import of `@/components/ui/input-otp`  import/order
+6:97  Warning: Insert `;`  prettier/prettier
+7:1  Error: `sonner` import should occur before import of `@/components/ui/input-otp`  import/order
+7:31  Warning: Insert `;`  prettier/prettier
+10:41  Warning: Insert `;`  prettier/prettier
+11:29  Warning: Insert `;`  prettier/prettier
+15:38  Warning: Insert `;`  prettier/prettier
+16:27  Warning: Insert `;`  prettier/prettier
+18:34  Warning: Insert `;`  prettier/prettier
+19:19  Warning: Insert `;`  prettier/prettier
+21:4  Warning: Insert `;`  prettier/prettier
+24:21  Warning: Replace `flex·min-h-screen·items-center·justify-center·bg-slate-50·p-4·relative·overflow-hidden` with `relative·flex·min-h-screen·items-center·justify-center·overflow-hidden·bg-slate-50·p-4`  prettier/prettier
+26:23  Warning: Replace `absolute·inset-0·overflow-hidden·pointer-events-none` with `pointer-events-none·absolute·inset-0·overflow-hidden`  prettier/prettier
+27:55  Warning: Replace `w-[30%]·h` with `h-[30%]·w`  prettier/prettier
+28:34  Warning: Replace `bottom-[20%]·right-[15%]·w-[30%]·h` with `right-[15%]·bottom-[20%]·h-[30%]·w`  prettier/prettier
+30:1  Warning: Delete `······`  prettier/prettier
+30:1  Error: Trailing spaces not allowed.  no-trailing-spaces
+31:24  Warning: Replace `w-full·max-w-md·border-zinc-200·bg-white·shadow-[0_8px_30px_rgb(0,0,0,0.04)]·relative·z-10·` with `relative·z-10·w-full·max-w-md·border-zinc-200·bg-white·shadow-[0_8px_30px_rgb(0,0,0,0.04)]·`  prettier/prettier
+32:32  Warning: Replace `text-center·space-y-2` with `space-y-2·text-center`  prettier/prettier
+33:35  Warning: Replace `w-12·h-12·bg-zinc-900·rounded-xl·flex·items-center·justify-center·mb-2` with `mb-2·flex·h-12·w-12·items-center·justify-center·rounded-xl·bg-zinc-900`  prettier/prettier
+37:44  Warning: Replace `zinc-500·text-base·font-medium">⏎············Enter·secure·access·code⏎··········` with `base·font-medium·text-zinc-500">Enter·secure·access·code`  prettier/prettier
+41:61  Warning: Replace `b-12·pt-4` with `t-4·pb-12`  prettier/prettier
+42:20  Warning: Replace `⏎············maxLength={6}⏎············value={value}⏎············onChange={(v)·=>·setValue(v)}⏎············onComplete={handleComplete}⏎············autoFocus⏎··········` with `·maxLength={6}·value={value}·onChange={(v)·=>·setValue(v)}·onComplete={handleComplete}·autoFocus`  prettier/prettier
+51:30  Warning: Delete `·`  prettier/prettier
+51:30  Error: Trailing spaces not allowed.  no-trailing-spaces
+52:26  Warning: Delete `·`  prettier/prettier
+52:26  Error: Trailing spaces not allowed.  no-trailing-spaces
+53:28  Warning: Delete `·`  prettier/prettier
+53:28  Error: Trailing spaces not allowed.  no-trailing-spaces
+54:30  Warning: Replace `w-10·h-14·sm:w-12·sm:h-16·text-2xl·font-bold·border-zinc-200·text-zinc-900·bg-zinc-50·rounded-lg·focus-within:ring-2·focus-within:ring-zinc-950·transition-all"·` with `h-14·w-10·rounded-lg·border-zinc-200·bg-zinc-50·text-2xl·font-bold·text-zinc-900·transition-all·focus-within:ring-2·focus-within:ring-zinc-950·sm:h-16·sm:w-12"`  prettier/prettier
+54:189  Error: Trailing spaces not allowed.  no-trailing-spaces
+59:35  Warning: Replace `zinc-300·text-xs·uppercase·tracking-widest·font-bold">⏎············Authorized·Personnel·Only⏎··········` with `xs·font-bold·tracking-widest·text-zinc-300·uppercase">Authorized·Personnel·Only`  prettier/prettier
+65:4  Warning: Insert `;`  prettier/prettier
+
+./src/components/data-table/data-table.tsx
+79:9  Warning: Unnecessary conditional, value is always truthy.  @typescript-eslint/no-unnecessary-condition
+
+./src/components/data-table/drag-column.tsx
+26:36  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/config/app-config.ts
+11:17  Warning: Delete `⏎·····`  prettier/prettier
+
+./src/hooks/amountToWord.ts
+1:1  Error: Filename is not in kebab case. Rename it to `amount-to-word.ts`.  unicorn/filename-case
+1:26  Warning: Replace `⏎····"",·"unu",·"doi",·"trei",·"patru",·"cinci",⏎····"șase",·"șapte",·"opt",·"nouă"⏎` with `"",·"unu",·"doi",·"trei",·"patru",·"cinci",·"șase",·"șapte",·"opt",·"nouă"`  prettier/prettier
+7:1  Warning: Replace `····"zece",·"unsprezece",·"doisprezece",` with `··"zece",⏎··"unsprezece",⏎··"doisprezece",⏎·`  prettier/prettier
+8:1  Warning: Replace `····"paisprezece",·"cincisprezece",` with `··"paisprezece",⏎··"cincisprezece",⏎·`  prettier/prettier
+9:1  Warning: Replace `····"șaptesprezece",·"optsprezece",·"nouăsprezece"` with `··"șaptesprezece",⏎··"optsprezece",⏎··"nouăsprezece",`  prettier/prettier
+13:3  Warning: Replace `··"",·"",·"douăzeci",·"treizeci",` with `"",⏎··"",⏎··"douăzeci",⏎··"treizeci",⏎·`  prettier/prettier
+14:1  Warning: Replace `····"cincizeci",·"șaizeci",` with `··"cincizeci",⏎··"șaizeci",⏎·`  prettier/prettier
+15:1  Warning: Replace `····"optzeci",·"nouăzeci"` with `··"optzeci",⏎··"nouăzeci",`  prettier/prettier
+19:1  Warning: Replace `····` with `··`  prettier/prettier
+21:3  Warning: Delete `··`  prettier/prettier
+22:1  Warning: Delete `····`  prettier/prettier
+23:5  Warning: Delete `····`  prettier/prettier
+24:1  Warning: Replace `············` with `······`  prettier/prettier
+25:5  Warning: Delete `····`  prettier/prettier
+26:1  Warning: Replace `············` with `······`  prettier/prettier
+26:23  Warning: Generic Object Injection Sink  security/detect-object-injection
+27:5  Warning: Delete `····`  prettier/prettier
+28:1  Warning: Delete `····`  prettier/prettier
+29:1  Warning: Replace `········` with `····`  prettier/prettier
+30:1  Warning: Delete `··`  prettier/prettier
+32:3  Warning: Delete `··`  prettier/prettier
+33:1  Warning: Replace `········` with `····`  prettier/prettier
+34:5  Warning: Delete `····`  prettier/prettier
+35:1  Warning: Replace `············` with `······`  prettier/prettier
+36:1  Warning: Replace `········` with `····`  prettier/prettier
+37:1  Warning: Delete `··`  prettier/prettier
+38:1  Warning: Delete `····`  prettier/prettier
+39:3  Warning: Delete `··`  prettier/prettier
+40:1  Warning: Replace `········` with `····`  prettier/prettier
+40:19  Warning: Generic Object Injection Sink  security/detect-object-injection
+41:1  Warning: Delete `··`  prettier/prettier
+43:3  Warning: Delete `··`  prettier/prettier
+47:3  Warning: Delete `··`  prettier/prettier
+49:3  Warning: Delete `··`  prettier/prettier
+51:1  Warning: Replace `····` with `··`  prettier/prettier
+52:1  Warning: Delete `····`  prettier/prettier
+53:1  Warning: Replace `········` with `····`  prettier/prettier
+54:1  Warning: Delete `······`  prettier/prettier
+55:5  Warning: Delete `····`  prettier/prettier
+56:1  Warning: Delete `······`  prettier/prettier
+57:5  Warning: Delete `····`  prettier/prettier
+58:1  Warning: Replace `········` with `····`  prettier/prettier
+59:1  Warning: Delete `····`  prettier/prettier
+60:1  Warning: Replace `····` with `··`  prettier/prettier
+62:1  Warning: Delete `··`  prettier/prettier
+63:1  Warning: Delete `····`  prettier/prettier
+64:5  Warning: Delete `····`  prettier/prettier
+65:1  Warning: Replace `············` with `······`  prettier/prettier
+66:5  Warning: Delete `····`  prettier/prettier
+67:1  Warning: Replace `············` with `······`  prettier/prettier
+68:5  Warning: Delete `····`  prettier/prettier
+69:1  Warning: Delete `····`  prettier/prettier
+70:1  Warning: Replace `········` with `····`  prettier/prettier
+71:1  Warning: Delete `··`  prettier/prettier
+73:3  Warning: Delete `··`  prettier/prettier
+74:1  Warning: Replace `········` with `····`  prettier/prettier
+75:3  Warning: Delete `··`  prettier/prettier
+77:1  Warning: Delete `··`  prettier/prettier
+81:1  Warning: Replace `····` with `··`  prettier/prettier
+83:3  Warning: Delete `··`  prettier/prettier
+84:1  Warning: Replace `····` with `··`  prettier/prettier
+86:1  Warning: Delete `··`  prettier/prettier
+88:3  Warning: Delete `··`  prettier/prettier
+89:1  Warning: Delete `··`  prettier/prettier
+91:3  Warning: Delete `··`  prettier/prettier
+92:2  Warning: Insert `⏎`  prettier/prettier
+
+./src/hooks/use-data-table-instance.ts
+54:45  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/middleware.disabled.ts
+10:7  Warning: Unnecessary conditional, value is always truthy.  @typescript-eslint/no-unnecessary-condition
+
+./src/navigation/sidebar/sidebar-items.ts
+2:3  Warning: 'ShoppingBag' is defined but never used.  @typescript-eslint/no-unused-vars
+3:3  Warning: 'Forklift' is defined but never used.  @typescript-eslint/no-unused-vars
+4:3  Warning: 'Mail' is defined but never used.  @typescript-eslint/no-unused-vars
+5:3  Warning: 'MessageSquare' is defined but never used.  @typescript-eslint/no-unused-vars
+6:3  Warning: 'Calendar' is defined but never used.  @typescript-eslint/no-unused-vars
+7:3  Warning: 'Kanban' is defined but never used.  @typescript-eslint/no-unused-vars
+8:3  Warning: 'ReceiptText' is defined but never used.  @typescript-eslint/no-unused-vars
+9:3  Warning: 'Users' is defined but never used.  @typescript-eslint/no-unused-vars
+10:3  Warning: 'Lock' is defined but never used.  @typescript-eslint/no-unused-vars
+11:3  Warning: 'Fingerprint' is defined but never used.  @typescript-eslint/no-unused-vars
+12:3  Warning: 'SquareArrowUpRight' is defined but never used.  @typescript-eslint/no-unused-vars
+14:3  Warning: 'ChartBar' is defined but never used.  @typescript-eslint/no-unused-vars
+15:3  Warning: 'Banknote' is defined but never used.  @typescript-eslint/no-unused-vars
+16:3  Warning: 'Gauge' is defined but never used.  @typescript-eslint/no-unused-vars
+17:3  Warning: 'GraduationCap' is defined but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules

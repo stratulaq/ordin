@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, useFormContext } from "react-hook-form"
 import * as z from "zod"
-import { CalendarIcon, Check, Square, Printer, User, SquareCheckBig, CreditCard, FileText, Settings2, SquareCheckBigIcon } from "lucide-react"
+import { CalendarIcon, Check, Square, Printer, User, SquareCheckBig, FileText } from "lucide-react"
 import { format } from "date-fns"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -19,11 +18,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Card, CardContent } from "@/components/ui/card"
 import { toast } from "sonner"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
 import {
   Sidebar,
   SidebarContent,
@@ -42,7 +38,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { amountToRomanianWords } from "@/hooks/amountToWord";
+import { amountToRomanianWords } from "@/hooks/amount-to-word";
 import { ButtonGroup } from "@/components/ui/button-group"
 import {
   Field,
@@ -140,8 +136,7 @@ export default function PaymentOrderForm() {
 }
 
 function AppSidebar() {
-  const { control, watch } = useFormContext<FormValues>()
-  const tipTransfer = watch("tipTransfer")
+  const { control } = useFormContext<FormValues>()
 
   const normalize = (val: string): string => {
     val = val.replace(/[^\d.,]/g, "");
