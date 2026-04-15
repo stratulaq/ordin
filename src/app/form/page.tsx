@@ -449,13 +449,13 @@ function OrderPreview() {
         {/* Platitor Section */}
         <div className="flex flex-col gap-2">
           <SectionTitle number="1" title="Plătitor" />
-          <PartPreview part={platitor} />
+          <PartPreview part={platitor} type="platitor" />
         </div>
 
         {/* Beneficiar Section */}
         <div className="flex flex-col gap-2">
           <SectionTitle number="2" title="Beneficiar" />
-          <PartPreview part={beneficiar} />
+          <PartPreview part={beneficiar} type="beneficiar" />
         </div>
 
         {/* Payment Details */}
@@ -465,7 +465,7 @@ function OrderPreview() {
             <div className="flex flex-col gap-4 flex-1">
               <SectionTitle number="3" title="Destinatia platii" />
               <div className="bg-zinc-50 p-2 rounded-lg min-h-[100px] border border-zinc-100">
-                <p className="leading-relaxed italic">{values.destinatiaPlatii || "Nicio explicație furnizată..."}</p>
+                <p className="leading-relaxed italic">{values.destinatiaPlatii || ""}</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 flex-1  pt-2 border-t-2 border-zinc-400 inset-0">
@@ -554,15 +554,15 @@ function SectionTitle({ number, title }: { number: string; title: string }) {
 function LabelPreview({ label }: { label: string }) {
   return <p className="text-xs uppercase font-bold text-muted-foreground ">{label}</p>
 }
-function PartPreview({ part }: { part: { company: string; idno: string; bank: string; bic: string; codLEI: string; iban: string } }) {
+function PartPreview({ part, type }: { part: { company: string; idno: string; bank: string; bic: string; codLEI: string; iban: string }, type: "platitor" | "beneficiar" }) {
   return <div className="flex gap-4">
     <div className="flex flex-col gap-4 basis-2/3">
       <div>
-        <LabelPreview label="Denumire Plătitor" />
+        <LabelPreview label={`Denumire ${type}`} />
         <p className="font-bold border-b border-zinc-100 py-1">{part.company || "—"}</p>
       </div>
       <div>
-        <LabelPreview label="Banca Plătitorului" />
+        <LabelPreview label={`Banca ${type}`} />
         <p className="font-medium py-1 border-b border-zinc-100">{part.bank || "—"} / {part.bic || "—"}</p>
       </div>
     </div>
