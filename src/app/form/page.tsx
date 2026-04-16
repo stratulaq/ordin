@@ -1,5 +1,5 @@
 "use client"
-
+import { useState, useEffect } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, useFormContext } from "react-hook-form"
 import * as z from "zod"
@@ -45,7 +45,7 @@ import {
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field"
-
+import { accountInfo } from "@/constants/stigma.constants";
 
 const formSchema = z.object({
   numar: z.string().min(1, "Required"),
@@ -72,29 +72,44 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>
 
 export default function PaymentOrderForm() {
+  const [type, setType] = useState("platitor")
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       numar: "",
       dataEmiterii: new Date(),
       suma: "",
-      platitorNume: "",
-      platitorIban: "",
-      platitorCodFiscal: "",
-      platitorCodLEI: "",
-      platitorBic: "",
-      prestatorPlatitor: "",
-      beneficiarNume: "F.P.C. STIGMA-96 S.R.L.",
-      beneficiarIban: "MD67EC000000225117161194",
-      beneficiarBic: "ECBMMD2X",
-      beneficiarCodFiscal: "1003600160500",
-      beneficiarCodLEI: "",
-      prestatorBeneficiar: "BC 'EuroCreditBank' S.A.",
+      platitorNume: type === "platitor" ? accountInfo.company : "",
+      platitorIban: type === "platitor" ? accountInfo.iban : "",
+      platitorCodFiscal: type === "platitor" ? accountInfo.idno : "",
+      platitorCodLEI: type === "platitor" ? accountInfo.codLEI : "",
+      platitorBic: type === "platitor" ? accountInfo.bic : "",
+      prestatorPlatitor: type === "platitor" ? accountInfo.bank : "",
+      beneficiarNume: type === "beneficiar" ? accountInfo.company : "",
+      beneficiarIban: type === "beneficiar" ? accountInfo.iban : "",
+      beneficiarBic: type === "beneficiar" ? accountInfo.bic : "",
+      beneficiarCodFiscal: type === "beneficiar" ? accountInfo.idno : "",
+      beneficiarCodLEI: type === "beneficiar" ? accountInfo.codLEI : "",
+      prestatorBeneficiar: type === "beneficiar" ? accountInfo.bank : "",
       destinatiaPlatii: "",
       tipTransfer: "NORMAL",
     },
   })
-
+  useEffect(() => {
+    form.setValue("platitorNume", type === "platitor" ? accountInfo.company : "");
+    form.setValue("platitorIban", type === "platitor" ? accountInfo.iban : "");
+    form.setValue("platitorCodFiscal", type === "platitor" ? accountInfo.idno : "");
+    form.setValue("platitorCodLEI", type === "platitor" ? accountInfo.codLEI : "");
+    form.setValue("platitorBic", type === "platitor" ? accountInfo.bic : "");
+    form.setValue("prestatorPlatitor", type === "platitor" ? accountInfo.bank : "");
+    form.setValue("beneficiarNume", type === "beneficiar" ? accountInfo.company : "");
+    form.setValue("beneficiarIban", type === "beneficiar" ? accountInfo.iban : "");
+    form.setValue("beneficiarBic", type === "beneficiar" ? accountInfo.bic : "");
+    form.setValue("beneficiarCodFiscal", type === "beneficiar" ? accountInfo.idno : "");
+    form.setValue("beneficiarCodLEI", type === "beneficiar" ? accountInfo.codLEI : "");
+    form.setValue("prestatorBeneficiar", type === "beneficiar" ? accountInfo.bank : "");
+  }, [type]);
   function onSubmit(values: FormValues) {
     window.print()
     console.log(values)
@@ -106,7 +121,7 @@ export default function PaymentOrderForm() {
     <SidebarProvider defaultOpen={true}>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex h-screen w-full overflow-hidden">
-          <AppSidebar />
+          <AppSidebar type={type} setType={setType} />
           <SidebarInset className="bg-white">
             <header className="flex h-14 shrink-0 items-center justify-between gap-2 border-b bg-white px-4 sticky top-0 z-10">
               <div className="flex items-center gap-2">
@@ -135,7 +150,7 @@ export default function PaymentOrderForm() {
   )
 }
 
-function AppSidebar() {
+function AppSidebar({ type, setType }: { type: string, setType: (type: string) => void }) {
   const { control } = useFormContext<FormValues>()
 
   const normalize = (val: string): string => {
@@ -148,14 +163,23 @@ function AppSidebar() {
   };
   return (
     <Sidebar variant="inset" className="border-r bg-white">
-      <SidebarHeader className="border-b p-4">
+      <SidebarHeader className="border-b">
         <div className="flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 text-white leading-none">
             <span className="text-xs font-bold font-mono">OP</span>
           </div>
           <div className="flex flex-col">
             <span className="text-sm font-bold tracking-tight">ORDIN DE PLATĂ</span>
-            <span className="text-[10px] text-muted-foreground uppercase font-medium">Configurator Document</span>
+            <ButtonGroup>
+              <Button variant={type === "platitor" ? "secondary" : "ghost"} onClick={() => setType("platitor")} size="sm"
+                className=" !rounded-e-none rounded-s-lg ">
+                Platitor
+              </Button>
+              <Button variant={type === "beneficiar" ? "secondary" : "ghost"} onClick={() => setType("beneficiar")} size="sm"
+                className="rounded-e-lg !rounded-s-none">
+                Beneficiar
+              </Button>
+            </ButtonGroup>
           </div>
         </div>
       </SidebarHeader>
@@ -166,7 +190,7 @@ function AppSidebar() {
           <SidebarGroupLabel className="flex items-center gap-2 text-zinc-900 font-bold uppercase tracking-wider text-[10px]">
             <FileText size={14} /> 1. Detalii Document
           </SidebarGroupLabel>
-          <SidebarGroupContent className="flex flex-col gap-2">
+          <SidebarGroupContent className="grid grid-cols-2 gap-2">
             <FormField
               control={control}
               name="numar"
@@ -192,7 +216,7 @@ function AppSidebar() {
                         <Button
                           variant={"outline"}
                           className={cn(
-                            "w-full pl-3 text-left font-normal h-8 text-xs",
+                            "w-full pl-3 text-left font-normal  text-xs",
                             !field.value && "text-muted-foreground"
                           )}
                         >
@@ -222,7 +246,7 @@ function AppSidebar() {
               control={control}
               name="suma"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="col-span-2">
                   <FormLabel className="text-xs">Suma (LEI)</FormLabel>
                   <FormControl>
                     <Input placeholder="0.00" {...field} className="" type="text"
@@ -243,14 +267,14 @@ function AppSidebar() {
         {/* Payer Info */}
         <SidebarGroup>
           <SidebarGroupLabel className="flex items-center gap-2 text-zinc-900 font-bold uppercase tracking-wider text-[10px]">
-            <User size={14} /> 2. Date Plătitor
+            <User size={14} /> {type === "beneficiar" ? "2. Date Plătitor" : "2. Date Beneficiar"}
           </SidebarGroupLabel>
-          <SidebarGroupContent className="flex flex-col gap-2">
+          <SidebarGroupContent className="grid grid-cols-4 gap-2">
             <FormField
               control={control}
-              name="platitorNume"
+              name={type === "beneficiar" ? "platitorNume" : "beneficiarNume"}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="col-span-4">
                   <FormLabel className="text-xs">Denumire / Nume</FormLabel>
                   <FormControl>
                     <Input placeholder="Nume" {...field} className="" />
@@ -261,9 +285,9 @@ function AppSidebar() {
             />
             <FormField
               control={control}
-              name="platitorCodFiscal"
+              name={type === "beneficiar" ? "platitorCodFiscal" : "beneficiarCodFiscal"}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="col-span-4">
                   <FormLabel className="text-xs">IDNO</FormLabel>
                   <FormControl>
                     <Input placeholder="100..." {...field} className="" />
@@ -274,9 +298,9 @@ function AppSidebar() {
             />
             <FormField
               control={control}
-              name="platitorIban"
+              name={type === "beneficiar" ? "platitorIban" : "beneficiarIban"}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="col-span-3">
                   <FormLabel className="text-xs">IBAN</FormLabel>
                   <FormControl>
                     <Input placeholder="MD..." {...field} className="" />
@@ -287,9 +311,9 @@ function AppSidebar() {
             />
             <FormField
               control={control}
-              name="platitorCodLEI"
+              name={type === "beneficiar" ? "platitorCodLEI" : "beneficiarCodLEI"}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="col-span-1">
                   <FormLabel className="text-xs">Codul LEI</FormLabel>
                   <FormControl>
                     <Input placeholder="MDL..." {...field} className="" />
@@ -300,9 +324,9 @@ function AppSidebar() {
             />
             <FormField
               control={control}
-              name="prestatorPlatitor"
+              name={type === "beneficiar" ? "prestatorPlatitor" : "prestatorBeneficiar"}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="col-span-3">
                   <FormLabel className="text-xs">Banca</FormLabel>
                   <FormControl>
                     <Input placeholder="Nume Bancă" {...field} className="" />
@@ -313,9 +337,9 @@ function AppSidebar() {
             />
             <FormField
               control={control}
-              name="platitorBic"
+              name={type === "beneficiar" ? "platitorBic" : "beneficiarBic"}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="col-span-1">
                   <FormLabel className="text-xs">BIC</FormLabel>
                   <FormControl>
                     <Input placeholder="BIC" {...field} className="" />
